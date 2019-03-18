@@ -1,0 +1,521 @@
+@font-face 
+{
+  font-family: mijnfont;
+  src: url(mijnfont.ttf);
+}
+
+@font-face 
+{
+  font-family: Viking-Normal;
+  src: url(vikingfont.ttf);
+}
+
+body
+{
+	background-color: #333333;
+}
+
+.viewer
+{
+  	display: grid;
+  	grid-template-columns: repeat(15, 1fr);
+  	grid-template-rows: repeat(9, 5vw);
+  	grid-gap: 0rem;
+}
+
+.image--
+{
+  	grid-column-start: 3;
+  	grid-column-end: 10;
+  	grid-row-start: 1;
+  	grid-row-end: 6;
+}
+
+.image-
+{
+  	height: 100%;
+  	width: 100%;
+}
+
+.dice
+{
+	background-color: white;
+	font-size: 2.3rem;
+	font-family: mijnfont;
+	padding-left: 1.7%; 
+	padding-right: 1.7%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	border-radius: 25px;
+}
+
+#dice1
+{
+	position: fixed;
+	margin-left: 58%;
+	margin-top: 31%;
+}
+
+#dice2
+{
+	position: fixed;
+	margin-left: 66%;
+	margin-top: 31%;
+}
+
+#dice3
+{
+	position: fixed;
+	margin-left: 74%;
+	margin-top: 31%;
+}
+
+#dice4
+{
+	position: fixed;
+	margin-left: 58%;
+	margin-top: 39%;
+}
+
+#dice5
+{
+	position: fixed;
+	margin-left: 66%;
+	margin-top: 39%;
+}
+
+#dice6
+{
+	position: fixed;
+	margin-left: 74%;
+	margin-top: 39%;
+}
+
+#broadsword
+{
+	display: grid;
+	grid-column-start: 10;
+	grid-column-end: 13;
+	grid-row-start: 1;
+	grid-row-end: 4; 
+	background-color: #662221;
+	border-radius: 25px;
+	border: 8px solid transparent;
+	border-color: #B83B39;
+}
+
+#healingCrystal
+{
+	display: grid;
+	grid-column-start: 13;
+	grid-column-end: 16;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	background-color: #266421;
+	border-radius: 25px;
+	border: 8px solid transparent;
+	border-color: #41BA37;
+}
+
+#fireball
+{
+	display: grid;
+	grid-column-start: 10;
+	grid-column-end: 13;
+	grid-row-start: 4;
+	grid-row-end: 7;
+	background-color: #662221;
+	border-radius: 25px;
+	border: 8px solid transparent;
+	border-color: #B83B39;
+}
+
+#boop
+{
+	display: grid;
+	grid-column-start: 13;
+	grid-column-end: 16;
+	grid-row-start: 4;
+	grid-row-end: 7;
+	background-color: #A98031;
+	border-radius: 25px;
+	border: 8px solid transparent;
+	border-color: #CDB94B;
+}
+
+#broadswordCSS
+{
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 300%;
+	text-align: center;
+}
+
+#healingCrystalCSS
+{
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 300%;
+	text-align: center;
+}
+
+#fireballCSS
+{
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 300%;
+	text-align: center;
+}
+
+#boopCSS
+{
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 300%;
+	text-align: center;
+}
+
+.dropPlaceBroadsword
+{
+	width: 5.2%;
+	height: 11%;
+	margin-left: 4.6%;
+	margin-top: 3%;
+	border-radius: 25px;
+	border-style: dashed;
+	border-color: white;
+	position: absolute;
+}
+
+.dropPlaceCrystal
+{
+	width: 5.2%;
+	height: 11%;
+	margin-left: 4.6%;
+	margin-top: 3%;
+	border-radius: 25px;
+	border-style: dashed;
+	border-color: white;
+	position: absolute;
+	font-family: Viking-Normal;
+	font-size: 2.8rem;
+	color: white;
+	text-align: center;
+}
+
+.dropPlaceFireball
+{
+	width: 5.2%;
+	height: 11%;
+	margin-left: 4.6%;
+	margin-top: 3%;
+	border-radius: 25px;
+	border-style: dashed;
+	border-color: white;
+	position: absolute;
+	font-family: Viking-Normal;
+	font-size: 2.8rem;
+	color: white;
+	text-align: center;
+}
+
+.dropPlaceBoop
+{
+	width: 5.2%;
+	height: 11%;
+	margin-left: 4.6%;
+	margin-top: 3%;
+	border-radius: 25px;
+	border-style: dashed;
+	border-color: white;
+	position: absolute;
+}
+
+.drag 
+{ 
+	position: relative; 
+}
+
+.subtextFireball
+{
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-family: Viking-Normal;
+	position: absolute;
+	margin-left: 64.3%;
+	margin-top: 26%;
+}
+
+.subtextBroadsword
+{
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-family: Viking-Normal;
+	position: absolute;
+	margin-left: 63%;
+	margin-top: 11%;
+}
+
+.subtextCrystal
+{
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-family: Viking-Normal;
+	position: absolute;
+	margin-left: 82%;
+	margin-top: 11%;
+}
+
+.subtextBoop
+{
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-family: Viking-Normal;
+	position: absolute;
+	margin-left: 84.3%;
+	margin-top: 26%;
+}
+
+#attack
+{
+	padding: 25px 50px;
+  	font-size: 3rem;
+  	text-align: center;
+  	cursor: pointer;
+  	outline: none;
+  	color: white;
+  	background-color: #B83B39;
+  	border: none;
+  	border-radius: 15px;
+  	box-shadow: 0 9px #999;
+  	position: absolute;
+  	margin-left: 77%;
+  	margin-top: 34.5%;
+  	font-family: Viking-Normal;
+}
+
+#attack:hover 
+{
+	background-color: #662221;
+}
+
+#attack:active {
+  background-color: #662221;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#kamerNummer
+{
+	position: absolute;
+	margin-top: 25%;
+	margin-left: 20%;
+}
+
+#muziek
+{
+	position: absolute;
+	margin-top: 40%;
+}
+
+#locationHTML
+{
+	position: absolute;
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 3rem;
+	margin-left: 3.5%;
+	margin-top: 0.5%;
+}
+
+#yourHealth
+{
+	position: absolute;
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 3rem;
+	margin-top: 7.5%;
+	margin-left: 3.5%;
+}
+
+#coins
+{
+	position: absolute;
+	font-family: Viking-Normal;
+	color: white;
+	font-size: 3rem;
+	margin-top: 14.5%;
+	margin-left: 3.5%;
+}
+
+#muteMusic
+{
+	position: absolute;
+	margin-top: 44%;
+}
+
+#resumeMusic
+{
+	position: absolute;
+	margin-top: 43%;
+	height: 10%;
+	font-size: 3rem;
+	background-color: #333333;
+	border-style: solid;
+	border-color: #333333;
+}
+
+#muteMusic
+{
+	position: absolute;
+	margin-top: 43%;
+	margin-left: 4%;
+	height: 10%;
+	font-size: 3rem;
+	background-color: #333333;
+	border-style: solid;
+	border-color: #333333;
+}
+
+#muteMusic:focus 
+{
+	outline:0;
+}
+
+#resumeMusic:focus 
+{
+	outline:0;
+}
+
+#lore
+{
+	display: grid;
+	grid-column-start: 3;
+	grid-column-end: 10;
+	grid-row-start: 6;
+	grid-row-end: 8;
+}
+
+#mogenlijkhedenFigure
+{
+	display: grid;
+	grid-column-start: 3;
+	grid-column-end: 7;
+	grid-row-start: 7;
+	grid-row-end: 10;
+}
+
+#mogenlijkheden
+{
+	color: white;
+	font-family:  Viking-Normal;
+	font-size: 2.25rem;
+}
+
+#start
+{
+	z-index: 8;
+	padding: 25px 80px;
+  	font-size: 3rem;
+  	text-align: center;
+  	cursor: pointer;
+  	outline: none;
+  	color: white;
+  	background-color: #1574c5;
+  	border: none;
+  	border-radius: 15px;
+  	box-shadow: 0 9px #999;
+  	position: absolute;
+  	margin-left: 30%;
+  	margin-top: 34.5%;
+  	font-family: Viking-Normal;
+}
+
+#start:hover 
+{
+	background-color: #0f4f86;
+}
+
+#start:active 
+{
+  background-color: #0f4f86;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#appear
+{
+	position: absolute;
+	background-color: #333333;
+	padding: 19%;
+	margin-left: 60%;
+	z-index: 5;
+}
+
+#appear2
+{
+	position: absolute;
+	background-color: #333333;
+	padding: 10%;
+	width: 48%;
+	margin-left: 30%;
+	margin-top: 25%;
+	z-index: 5;
+}
+
+#appear3
+{
+	position: absolute;
+	background-color: #333333;
+	height: 45%;
+	width: 15%;
+	margin-left: 0%;
+	margin-top: 21%;
+	z-index: 5;
+}
+
+#plaatje
+{
+	position: absolute;
+	margin-top: 25.8%;
+	height: 35%;
+	width: auto;
+}
+
+#plaatjeEnemy
+{
+	position: absolute;
+	color: white;
+	font-family: Viking-Normal;
+	font-size: 3rem;
+	margin-top: 22%;
+}
+
+.input
+{
+	position: absolute;
+	margin-left: 35%;
+	margin-top: 32.5%;
+	color: white;
+	font-family: Viking-Normal;
+	font-size: 3rem;
+}
+
+input, textarea 
+{
+  margin-top: 2%;
+  background-color : #333333;
+  color: white;
+  width: 99%;
+  font-size: 2.5rem;
+  font-family: Viking-Normal;
+}
+
+.hiden
+{
+	display: none;
+}

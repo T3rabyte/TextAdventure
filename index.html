@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text adventure</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="SHORTCUT ICON" href="img/icon.ico" type="image/x-icon" />
+    <link rel="ICON" href="img/icon.ico" type="image/ico" />
+</head>
+<body>
+<div class="viewer" id="viewer1">
+
+	<div id="appear"></div>
+	<div id="appear2"></div>
+	<div id="appear3"></div>
+
+	<figure  class="image--">
+		<img id="image" src="img/background/1.jpg" class="image-">
+	</figure>
+
+	<div>
+		<div id="locationHTML">location:</div>
+		<div id="yourHealth">Health: <br>15❤️</div>
+		<div id="coins">Gold: <br>5💰</div>
+	</div>
+
+		<div id="plaatjeEnemy">Enemy:</div>
+		<img src="" id="plaatje">
+
+		<button id="muteMusic">🔇</button>
+		<button id="resumeMusic">🔊</button>
+
+	<div class="subtextBroadsword">DO ⚔️▢ +2 DAMAGE</div>
+	<div class="subtextCrystal">RECOVER 💚▢ HEALTH</div>
+	<div class="subtextFireball">DO 🔥️▢ DAMAGE</div>
+	<div class="subtextBoop">DO ⚔️4 DAMAGE</div>
+
+	<figure id="broadsword" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<div id="broadswordCSS">Broadsword</div>
+		<div id="div2" ondrop="dropBroadsword(event)" ondragover="allowDrop(event)" class="dropPlaceBroadsword"></div>		
+	</figure>
+	<figure id="healingCrystal" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<div id="healingCrystalCSS">Healing Crystal</div>
+		<div id="div2" ondrop="dropCrystal(event)" ondragover="allowDrop(event)" class="dropPlaceCrystal" class="droptext">MAX<br>3</div>
+	</figure>
+	<figure id="fireball" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<div id="fireballCSS">Fireball</div>
+		<div id="div2" ondrop="dropFireball(event)" ondragover="allowDrop(event)" class="dropPlaceFireball">EVEN</div>
+	</figure>
+	<figure id="boop">
+		<div id="boopCSS">Boop</div>
+		<div id="div2" ondrop="dropBoop(event)" ondragover="allowDrop(event)" class="dropPlaceBoop"></div>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		</div>
+	</figure>
+
+	<button id="start">START</button>
+
+	<figure id="lore"></figure>
+	<figure id="mogenlijkhedenFigure">
+		<ul id="mogenlijkheden"></ul>
+	</figure>
+
+	<div class="input">
+		<label for="myInput">What are you going to do?<br></label>
+		<input type="text" name="myInput" id="myInput" autofocus>
+	</div>
+	
+		<div class="dice" id="dice1" draggable="true" ondragstart="drag(event)" class="drag">1</div>
+		<div class="dice" id="dice2" draggable="true" ondragstart="drag(event)" class="drag">2</div>
+		<div class="dice" id="dice3" draggable="true" ondragstart="drag(event)" class="drag">3</div>
+		<div class="dice" id="dice4" draggable="true" ondragstart="drag(event)" class="drag">4</div>
+		<div class="dice" id="dice5" draggable="true" ondragstart="drag(event)" class="drag">5</div>
+		<div class="dice" id="dice6" draggable="true" ondragstart="drag(event)" class="drag">6</div>
+	
+	<div>
+		<button id="attack" id="appear">ATTACK</button>
+	</div>
+</div>
+<script src="js.js" type="text/javascript"></script>
+</body>
+</html>
