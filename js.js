@@ -386,127 +386,6 @@ function dropBoop(ev)
   ev.target.appendChild(document.getElementById(dataBoop));
 }
 
-function treasure()
-{
-	if (zitInKamer == 15) 
-	{
-		TreasureGold();
-	}
-
-	if (zitInKamer == 16) 
-	{
-		TreasureHealth();
-	}
-
-	if (zitInKamer == 20) 
-	{
-		TreasureHealth();
-	}
-
-	if (zitInKamer == 21) 
-	{
-		TreasureGold();
-	}
-}
-
-function TreasureGold()
-{
-	if (goldFound == false) 
-	{
-		if (evt.key == "Enter")	
-    	{
-  			let inputArray = myInput.value.split(" ");
-
-  			if (inputArray[0] == "pick" && inputArray[1] == "up") 
-  			{
-  				infoGold += 7;
-  				goldFound = true;
-				zitInKamer = richting;
-				kamerWeergaven();
-  			}
-  			else
-  			{
-  				zitInKamer = richting;
-		   		kamerWeergaven();
-  			}
-		}
-	}
-	if (goldFound2 == false) 
-	{
-		if (evt.key == "Enter")	
-    	{
-  			let inputArray = myInput.value.split(" ");
-
-  			if (inputArray[0] == "pick" && inputArray[1] == "up") 
-  			{
-  				infoGold += 7;
-  				goldFound = true;
-				zitInKamer = richting;
-				kamerWeergaven();
-  			}
-  			else
-  			{
-  				zitInKamer = richting;
-		   		kamerWeergaven();
-  			}
-		}
-	}
-	else
-	{
-		zitInKamer = richting;
-		kamerWeergaven();
-	}
-}
-
-function TreasureHealth()
-{
-	if (healthFound == false) 
-	{
-		if (evt.key == "Enter")	
-    	{
-  			let inputArray = myInput.value.split(" ");
-
-  			if (inputArray[0] == "pick" && inputArray[1] == "up") 
-  			{
-  				infoHealth += 3;
-  				healthFound = true;
-				zitInKamer = richting;
-				kamerWeergaven();
-  			}
-  			else
-  			{
-  				zitInKamer = richting;
-		   		kamerWeergaven();
-  			}
-		}
-	}
-	if (healthFound2 == false) 
-	{
-		if (evt.key == "Enter")	
-    	{
-  			let inputArray = myInput.value.split(" ");
-
-  			if (inputArray[0] == "pick" && inputArray[1] == "up") 
-  			{
-  				infoHealth += 3;
-  				healthFound = true;
-				zitInKamer = richting;
-				kamerWeergaven();
-  			}
-  			else
-  			{
-  				zitInKamer = richting;
-		   		kamerWeergaven();
-  			}
-		}
-	}
-	else
-	{
-		zitInKamer = richting;
-		kamerWeergaven();
-	}
-}
-
 function battle()
 {
 	if (zitInKamer == 11) 
@@ -806,7 +685,7 @@ function getInput(evt)
   					case "Skarsvag":
   						richting = 6;
   						zitInKamer = 16;
-  						treasure();
+  						kamerWeergaven();
   						break;
   				}
   			}
@@ -828,7 +707,7 @@ function getInput(evt)
   					case "Knarrlaget":
   						richting = 4;
   						zitInKamer = 15;
-  						treasure();
+  						kamerWeergaven();
   						break;
   					case "Rakvag":
   						richting = 5;
@@ -855,7 +734,7 @@ function getInput(evt)
   					case "Angvik":
   						richting = 3;
   						zitInKamer = 15;
-  						treasure();
+  						kamerWeergaven();
   						break;
   					case "Rakvag":
   						richting = 5;
@@ -865,7 +744,7 @@ function getInput(evt)
   					case "Hellefjord":
   						richting = 7;
   						zitInKamer = 20;
-  						treasure();
+  						kamerWeergaven();
   						break;
   				}
   			}
@@ -897,7 +776,7 @@ function getInput(evt)
   					case "Hjemmeluft":
   						richting = 8;
   						zitInKamer = 23;
-  						treasure();
+  						kamerWeergaven();
   						break;
   				}	
   			}
@@ -909,7 +788,7 @@ function getInput(evt)
   					case "Spjelkavik":
   						richting = 2;
   						zitInKamer = 16;
-  						treasure();
+  						kamerWeergaven();
   						break;
   					case "Angvik":
   						richting = 3;
@@ -946,7 +825,7 @@ function getInput(evt)
   					case "Knarrlaget":
   						richting = 4;
   						zitInKamer = 20;
-  						treasure();
+  						kamerWeergaven();
   						break;
   					case "Rakvag":
   						richting = 5;
@@ -963,7 +842,7 @@ function getInput(evt)
   					case "Rakvag":
   						richting = 5;
   						zitInKamer = 23;
-  						treasure();
+  						kamerWeergaven();
   						break;
   					case "Skarsvag":
   						richting = 6;
@@ -1019,6 +898,42 @@ function getInput(evt)
   					zitInKamer = richting;
   					kamerWeergaven();
   					break;
+  			}
+  		}	
+  		if (inputArray[0] == "pick" && inputArray[1] == "up") 
+  		{
+  			if(goldFound == false) 
+			{	
+  				infoGold += 7;
+  				goldFound = true;
+				zitInKamer = richting;
+				kamerWeergaven();
+  			}
+  			else if(goldFound2 == false)
+  			{
+  				infoGold += 7;
+  				goldFound = true;
+				zitInKamer = richting;
+				kamerWeergaven();
+  			}
+  			else if(healthFound == false) 
+  			{
+  				infoHealth += 3;
+  				healthFound = true;
+				zitInKamer = richting;
+				kamerWeergaven();
+  			}
+  			else if(healthFound2 == false) 
+  			{
+  				infoHealth += 3;
+  				healthFound2 = true;
+				zitInKamer = richting;
+				kamerWeergaven();
+  			}
+  			else
+  			{
+  				zitInKamer = richting;
+		   		kamerWeergaven();
   			}
   		}
   		myInput.value = "";
